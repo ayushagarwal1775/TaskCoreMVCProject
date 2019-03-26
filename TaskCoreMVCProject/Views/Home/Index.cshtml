@@ -1,0 +1,203 @@
+﻿
+@{
+    ViewData["Title"] = "Productinformation";
+}
+
+<h2>Productinformation</h2>
+
+<!DOCTYPE html>
+<style>
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+</style>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <table id="tblTripManagement" class="table myfleet_grid" width="100%">
+        <thead>
+            <tr>
+
+                <th>Product</th>
+                <th>Price</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Count > 0)
+            {
+                foreach (var AdminConsignment in Model)
+                {
+                    <tr style="cursor:pointer;" id="@AdminConsignment.ID" value="@AdminConsignment.ID">
+
+                        <td id="trackingId">@AdminConsignment.Product</td>
+
+
+                        <td>@AdminConsignment.Price</td>
+                        <td> <button type="button" onclick="Edit(@AdminConsignment.ID,@AdminConsignment.Price)">Edit</button></td>
+                        <td><button type="button" onclick="Delete(@AdminConsignment.ID)">Delete</button></td>
+                    </tr>
+
+                }
+            }
+            else
+            {
+                <tr><td colspan="9" style="text-align:center">No Records Found</td></tr>
+            }
+        </tbody>
+    </table>
+    <button type="button" onclick="AddInfo()">Add New Product</button>
+    <div id="PopUp" hidden="hidden" class="modal">
+
+        <div class="modal-content">
+            <span class="close">*</span>
+            <form action="/action_page.php">
+                
+                Product: <input type="text" id="Product"><br>
+                Price:       <input type="text" id="Price"><br>
+                <input type="button" value="Submit" onclick="AddDetails()">
+            </form>
+        </div>
+
+
+    </div>
+    <div id="PopUpUpdate" hidden="hidden" class="modal">
+
+        <div class="modal-content">
+            <span class="close">*</span>
+            <form action="/action_page.php">
+                <input type="text" id="id" hidden="hidden"><br>
+              
+                Price:       <input type="text" id="newprice"><br>
+                <input type="button" value="Submit" onclick="UpdateDetails()">
+            </form>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
+<script>
+    var span = document.getElementsByClassName("close")[0];
+    var modal = document.getElementById("PopUp");
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    function AddInfo() {
+        var div = document.getElementById("PopUp");
+        if (div.style.display !== "none") {
+            div.style.display = "none";
+        }
+        else {
+            div.style.display = "block";
+        }  
+      
+    }
+</script>
+<script>
+    function Edit(id, price) {
+        debugger
+        var div = document.getElementById("PopUpUpdate"); 
+
+      
+            document.getElementById('id').value = id;
+           
+            document.getElementById('Price').value = price;
+            div.style.display = "block";
+          
+       
+    }
+</script>
+<script>
+    function Delete(id) {
+        debugger
+        var row =id; 
+        $.ajax({
+                type: "POST",
+                url: '@(Url.Action("Action", "Home"))',
+            data: { CommandName: "Delete", id:id  },
+                success: function (data) {
+                    location.reload();
+                  
+                }
+                  });
+    }
+
+
+    function AddDetails() {
+        debugger
+        var Product = $("#Product").val();
+       
+        var Price = $("#Price").val();
+        $.ajax({
+                type: "POST",
+                url: '@(Url.Action("Action", "Home"))',
+            data: { CommandName: "ADD", Product: Product, Price: Price  },
+                success: function (data) {
+                    location.reload();
+                  
+                }
+                  });
+    }
+     function UpdateDetails() {
+        debugger
+       
+         var id = $("#id").val();
+         var Price = $("#newprice").val();
+        $.ajax({
+                type: "POST",
+                url: '@(Url.Action("Action", "Home"))',
+            data: { CommandName: "Edit", Price: Price,id:id  },
+                success: function (data) {
+                    location.reload();
+                  
+                }
+                  });
+    }
+</script>
+
+
+

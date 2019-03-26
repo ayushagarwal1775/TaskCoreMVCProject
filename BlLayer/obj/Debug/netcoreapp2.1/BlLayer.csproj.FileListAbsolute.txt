@@ -1,0 +1,14 @@
+C:\Users\user\Source\Repos\TaskCoreMVCProject\BlLayer\bin\Debug\netcoreapp2.1\BlLayer.deps.json
+C:\Users\user\Source\Repos\TaskCoreMVCProject\BlLayer\bin\Debug\netcoreapp2.1\BlLayer.dll
+C:\Users\user\Source\Repos\TaskCoreMVCProject\BlLayer\bin\Debug\netcoreapp2.1\BlLayer.pdb
+C:\Users\user\Source\Repos\TaskCoreMVCProject\BlLayer\bin\Debug\netcoreapp2.1\DTOLayer.dll
+C:\Users\user\Source\Repos\TaskCoreMVCProject\BlLayer\bin\Debug\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\user\Source\Repos\TaskCoreMVCProject\BlLayer\bin\Debug\netcoreapp2.1\DTOLayer.pdb
+C:\Users\user\Source\Repos\TaskCoreMVCProject\BlLayer\bin\Debug\netcoreapp2.1\System.Data.SqlClient.xml
+C:\Users\user\Source\Repos\TaskCoreMVCProject\BlLayer\obj\Debug\netcoreapp2.1\BlLayer.csprojAssemblyReference.cache
+C:\Users\user\Source\Repos\TaskCoreMVCProject\BlLayer\obj\Debug\netcoreapp2.1\BlLayer.csproj.CoreCompileInputs.cache
+C:\Users\user\Source\Repos\TaskCoreMVCProject\BlLayer\obj\Debug\netcoreapp2.1\BlLayer.AssemblyInfoInputs.cache
+C:\Users\user\Source\Repos\TaskCoreMVCProject\BlLayer\obj\Debug\netcoreapp2.1\BlLayer.AssemblyInfo.cs
+C:\Users\user\Source\Repos\TaskCoreMVCProject\BlLayer\obj\Debug\netcoreapp2.1\BlLayer.csproj.CopyComplete
+C:\Users\user\Source\Repos\TaskCoreMVCProject\BlLayer\obj\Debug\netcoreapp2.1\BlLayer.dll
+C:\Users\user\Source\Repos\TaskCoreMVCProject\BlLayer\obj\Debug\netcoreapp2.1\BlLayer.pdb

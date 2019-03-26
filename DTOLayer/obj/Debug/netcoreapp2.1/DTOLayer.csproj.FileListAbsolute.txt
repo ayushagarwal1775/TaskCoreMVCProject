@@ -1,0 +1,9 @@
+C:\Users\user\Source\Repos\TaskCoreMVCProject\DTOLayer\bin\Debug\netcoreapp2.1\DTOLayer.deps.json
+C:\Users\user\Source\Repos\TaskCoreMVCProject\DTOLayer\bin\Debug\netcoreapp2.1\DTOLayer.dll
+C:\Users\user\Source\Repos\TaskCoreMVCProject\DTOLayer\bin\Debug\netcoreapp2.1\DTOLayer.pdb
+C:\Users\user\Source\Repos\TaskCoreMVCProject\DTOLayer\obj\Debug\netcoreapp2.1\DTOLayer.csprojAssemblyReference.cache
+C:\Users\user\Source\Repos\TaskCoreMVCProject\DTOLayer\obj\Debug\netcoreapp2.1\DTOLayer.csproj.CoreCompileInputs.cache
+C:\Users\user\Source\Repos\TaskCoreMVCProject\DTOLayer\obj\Debug\netcoreapp2.1\DTOLayer.AssemblyInfoInputs.cache
+C:\Users\user\Source\Repos\TaskCoreMVCProject\DTOLayer\obj\Debug\netcoreapp2.1\DTOLayer.AssemblyInfo.cs
+C:\Users\user\Source\Repos\TaskCoreMVCProject\DTOLayer\obj\Debug\netcoreapp2.1\DTOLayer.dll
+C:\Users\user\Source\Repos\TaskCoreMVCProject\DTOLayer\obj\Debug\netcoreapp2.1\DTOLayer.pdb
